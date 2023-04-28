@@ -1,38 +1,66 @@
 .App {
   text-align: center;
+  opacity: 1=;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  padding: 12px;
+  font-size: 25px;
+  font-weight: bolder;
+  font-style: italic;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: steelblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-styles {
+  padding: 12px;
+  width: 100%;
+  background-color: aquamarine;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+
+  padding: 17px;
+  font-size: larger;
+  font-weight: bolder;
+  width: 100%;
+  background-color: bisque;
+}
+
+.user-content {
+  margin: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.user-card {
+  background-color: beige;
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+}
+
+.btn {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  background-color: tomato;
+}
+
+.btn:hover {
+  background-color: black;
+  color: rgb(216, 35, 35);
+}
+
+.children {
+  height: 100vh;
+  margin: 1vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  justify-content: space-between;
 }
