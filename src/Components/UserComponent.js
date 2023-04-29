@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import BaseApp from "../Core/Base";
-import { data } from "../Data/data";
-import { AddUser } from "./AddUser";
+import { useHistory } from "react-router-dom"
 
-export default function UserComponent() {
-    const [user, setUser] = useState(data)
+
+export default function UserComponent({ user, setUser }) {
+    const history = useHistory()
+
     const deleteUser = (idx) => {
         const alterList = user.filter((per, id) => per.id !== idx)
         setUser(alterList)
@@ -15,8 +16,8 @@ export default function UserComponent() {
 
     return (
         <BaseApp
-            title="user Details">
-            <AddUser user={user} setUser={setUser} />
+            title="USED CAR DETAIL LIST">
+
             <div className="user-content">
 
                 {user.map((person, idx) => (
@@ -26,7 +27,12 @@ export default function UserComponent() {
                         <p>OWNER : {person.owner}</p>
                         <p>KMS RUNNING : {person.kms}</p>
                         <div className="btn-group">
-                            <button className="btn">EDIT</button>
+                            <button
+                                onClick={() => history.push(`/edit/${person.id}`)}
+                                className="btn">EDIT</button>
+                            <button className="btn"
+                                onClick={() => history.push(`/user/${idx}`)}
+                            >VIEW</button>
                             <button className="btn"
                                 onClick={() => deleteUser(person.id)}
                             >DELETE</button>

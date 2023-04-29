@@ -16,6 +16,22 @@
   padding: 12px;
   width: 100%;
   background-color: aquamarine;
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.nav-buttons {
+  border: 1px solid thick;
+  color: coral;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: beige;
+}
+
+.nav-buttons:hover {
+  background-color: black;
+  border: none;
 }
 
 footer {
